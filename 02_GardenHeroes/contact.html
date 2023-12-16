@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="popup.css">
+
+    <script src="index.js" defer></script>
+    <script src="navbar.js" defer></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <nav class="flex">
+        <div class="logo-name flex">
+            <!-- <img src="images/3D tree.png" alt=""> -->
+            <p><b>G</b>arden<br>
+                <span><b>H</b>eroes</span></p>
+        </div>
+        
+        <ul class="flex navMenu">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="about.html">Om oss</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <div class="closeMenu">&times;</div>
+        </ul>
+        <div class="openMenu"><img src="images/Garden_Fence.png" alt=""></div>
+    </nav>
+    
+        <!-- CONTACT US -->
+        <section class="contact green">
+            <div class="overlay">
+                <div class="container small">
+                    <div class="header flex">
+                        <div>
+                            <p class="section-intro">Låt oss prata <br> trädgård!</p>
+                            <!-- <h2>Låt oss prata trädgård!</h2> -->
+                        </div>
+                        <img id="header-girl" src="images/Garden girl.png" alt="">
+                    </div>
+                    <form action="" method="get">
+                        <div>
+                            <label for="contact-name">Namn</label>
+                            <input type="text" name="contact-name" id="contact-name">
+                        </div>
+                        <div>
+                            <label for="contact-email">Mejladress</label>
+                            <input type="email" name="contact-email" id="contact-email">
+                        </div>
+                        <div>
+                            <label for="contact-message">Meddelande</label>
+                            <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="button" class="form-btn" onclick="submitForm()" >Skicka meddelande</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- POP-UP RUTA -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h3>Tack för ditt meddelande</h3>
+            <p>Vi återkommer till dig så fort vi är tillbaka från trädgården!</p>
+            
+            <div class="display-form">
+                <label for="form-name">Namn</label>
+                <p id="form-name">Name</p>
+                <label for="form-email">Mejladress</label>
+                <p id="form-email">Email</p>
+                <label for="form-message">Meddelande</label>
+                <p id="form-message">Message</p>
+            </div>
+            </div>
+        </div>
+    
+    </body>
+    </html>

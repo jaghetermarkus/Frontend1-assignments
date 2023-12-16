@@ -1,0 +1,127 @@
+:root {
+    --background-color: rgb(240, 240, 240);
+    --accent-color: rgb(7, 38, 7);
+    --accent-color-90: rgba(7, 38, 7, .9);
+    --accent-color-light: rgb(101, 124, 54);
+
+    /** CSS PRIMARY COLORS */ 
+    --color-primary-a0:  #ffffff;
+    --color-primary-a10:  #bac4ba;
+    --color-primary-a20:  #7a8b7a;
+    --color-primary-a30:  #3e563f;
+    --color-primary-a50:  #062608;
+    --color-primary-a60:  #081f06;
+    --color-primary-a70:  #051704;
+    --color-primary-a80:  #030e02;
+    --color-primary-a90:  #000000;
+
+    /** CSS PRIMARY OPACITY */ 
+    --primary-opacity-95: rgba(7, 38, 7, .95);
+    --primary-opacity-90: rgba(7, 38, 7, .90);
+    --primary-opacity-80: rgba(7, 38, 7, .80);
+    --primary-opacity-70: rgba(7, 38, 7, .70);
+    --primary-opacity-60: rgba(7, 38, 7, .60);
+    --primary-opacity-50: rgba(7, 38, 7, .50);
+    --primary-opacity-30: rgba(7, 38, 7, .30);
+    --primary-opacity-20: rgba(7, 38, 7, .20);
+    --primary-opacity-10: rgba(7, 38, 7, .10);
+
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-accent-100: #e9aa5b;
+    --color-accent-200: #edb36d;
+    --color-accent-300: #f1bc7f;
+    --color-accent-400: #f4c691;
+    --color-accent-500: #f7cfa3;
+    --color-accent-600: #f9d9b5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #030e02;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+
+.hero {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;    
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    /* list-style: none;
+    width: 100%;
+    position: relative; */
+  }
+
+.gallery {
+    position: relative;
+}
+
+.image-section {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery .image-caption {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, .5);
+    color: #333;
+    opacity: 0;
+    transition: opacity .3s;
+    padding: 1rem;
+  }
+
+.gallery .image-caption:hover {
+    opacity: 1;
+  }
+
+.info-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-primary-a20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  text-transform: uppercase;
+  aspect-ratio: 5 / 4;
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper .container {
+    width: 90%;
+  }
+
+  .hero {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+}

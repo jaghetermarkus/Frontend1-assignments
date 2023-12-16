@@ -1,0 +1,173 @@
+:root {
+    --background-color: rgb(240, 240, 240);
+    --accent-color: rgb(7, 38, 7);
+    --accent-color-90: rgba(7, 38, 7, .9);
+    --accent-color-light: rgb(101, 124, 54);
+
+    /** CSS PRIMARY COLORS */ 
+    --color-primary-a0:  #ffffff;
+    --color-primary-a10:  #bac4ba;
+    --color-primary-a20:  #7a8b7a;
+    --color-primary-a30:  #3e563f;
+    --color-primary-a50:  #062608;
+    --color-primary-a60:  #081f06;
+    --color-primary-a70:  #051704;
+    --color-primary-a80:  #030e02;
+    --color-primary-a90:  #000000;
+
+    /** CSS PRIMARY OPACITY */ 
+    --primary-opacity-95: rgba(7, 38, 7, .95);
+    --primary-opacity-90: rgba(7, 38, 7, .90);
+    --primary-opacity-80: rgba(7, 38, 7, .80);
+    --primary-opacity-70: rgba(7, 38, 7, .70);
+    --primary-opacity-60: rgba(7, 38, 7, .60);
+    --primary-opacity-50: rgba(7, 38, 7, .50);
+    --primary-opacity-30: rgba(7, 38, 7, .30);
+    --primary-opacity-20: rgba(7, 38, 7, .20);
+    --primary-opacity-10: rgba(7, 38, 7, .10);
+
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-accent-100: #e9aa5b;
+    --color-accent-200: #edb36d;
+    --color-accent-300: #f1bc7f;
+    --color-accent-400: #f4c691;
+    --color-accent-500: #f7cfa3;
+    --color-accent-600: #f9d9b5;
+}
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+    height: 120px;
+    background-color: var(--color-primary-a10);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+}
+
+
+nav img {
+    display: none;
+}
+
+nav .openMenu {
+    display: none;
+    height: 40%;
+    cursor: pointer;
+}
+
+nav .navMenu .closeMenu {
+    font-size: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+.logo-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    color:  var(--color-primary-a50);
+    opacity: .9;
+    line-height: .8;
+}
+
+span {
+    letter-spacing: 3.5px;
+}
+
+.logo-name p {
+    display: inline-block;
+}
+
+ul {
+    gap: 3rem;
+    list-style-type: none;
+    color: var(--color-primary-a30);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+li:hover {
+    color: var(--color-primary-a50);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--color-primary-a30);
+}
+
+
+@media screen and (max-width: 900px) {
+
+    nav {
+        padding: 0 2rem;
+        height: 80px;
+    }
+
+    .logo-name {
+        font-size: 1.5rem;
+    }
+
+    nav ul.flex {
+        display: none; 
+    }
+
+    nav img {
+        display: inline-block;
+        max-height: 100%;
+    }
+
+    nav .navMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary-a10);
+        transition: top .2s ease;
+    }
+
+    nav .navMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+
+}

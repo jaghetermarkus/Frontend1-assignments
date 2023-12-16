@@ -1,0 +1,181 @@
+:root {
+    --background-color: rgb(240, 240, 240);
+    --accent-color: rgb(7, 38, 7);
+    --accent-color-90: rgba(7, 38, 7, .9);
+    --accent-color-light: rgb(101, 124, 54);
+
+    /** CSS PRIMARY COLORS */ 
+    --color-primary-a0:  #ffffff;
+    --color-primary-a10:  #bac4ba;
+    --color-primary-a20:  #7a8b7a;
+    --color-primary-a30:  #3e563f;
+    --color-primary-a50:  #062608;
+    --color-primary-a60:  #081f06;
+    --color-primary-a70:  #051704;
+    --color-primary-a80:  #030e02;
+    --color-primary-a90:  #000000;
+
+    /** CSS PRIMARY OPACITY */ 
+    --primary-opacity-95: rgba(7, 38, 7, .95);
+    --primary-opacity-90: rgba(7, 38, 7, .90);
+    --primary-opacity-80: rgba(7, 38, 7, .80);
+    --primary-opacity-70: rgba(7, 38, 7, .70);
+    --primary-opacity-60: rgba(7, 38, 7, .60);
+    --primary-opacity-50: rgba(7, 38, 7, .50);
+    --primary-opacity-30: rgba(7, 38, 7, .30);
+    --primary-opacity-20: rgba(7, 38, 7, .20);
+    --primary-opacity-10: rgba(7, 38, 7, .10);
+
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-accent-100: #e9aa5b;
+    --color-accent-200: #edb36d;
+    --color-accent-300: #f1bc7f;
+    --color-accent-400: #f4c691;
+    --color-accent-500: #f7cfa3;
+    --color-accent-600: #f9d9b5;
+}
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color); 
+    transition: background-color 1s ease;
+    min-height: 100vh;
+}
+
+.section-intro {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    color: var(--color-primary-a10);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.header {
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header + div {
+    max-height: 100%;
+}
+
+.header img {
+    max-height: 100%;
+    transform: scaleX(-1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary-a10);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.contact {
+    /* background-color: #A06F34; */
+    background-image: url(images/Mint_leaf.jpg);
+    background-size: 100%;
+    height: 100%;
+    min-height: calc(100vh - 120px);
+}
+
+.overlay {
+    padding: 8rem 0;
+    background-color: var(--primary-opacity-95);
+    min-height: calc(100vh - 120px);
+}
+
+div.small {
+    /* background-color: rgb(7, 38, 7); */
+    width: 40%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+form label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+    color: var(--color-primary-a10);
+}
+
+form div {
+    margin-bottom: 1.5rem;
+}
+
+form input, 
+form textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, .1);
+    /* background-color: var(--color-primary-a0);
+    opacity: .1; */
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    color: var(--color-primary-a0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    resize: none;
+}
+
+form input:focus, 
+form textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.form-btn {
+    width: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--color-primary-a10);
+    color: var(--color-primary-a10);
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.form-btn:hover {
+    background-color: var(--color-primary-a10);
+    color: var(--color-primary-a50);
+    transition: .6s;
+}
+
+@media screen and (max-width: 1450px) {
+    div.small {
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    div.small {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    div.header img {
+        display: none;
+    }
+
+    .overlay {
+        padding: 2rem 0;
+}

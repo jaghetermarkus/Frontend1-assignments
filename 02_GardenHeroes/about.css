@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, 
+html {
+    height: 100%;
+}
+
+body {
+    padding-bottom: 6rem;
+}
+
+.about-us {
+    aspect-ratio: 4 / 2;
+    background-image: url(images/AboutUs-gardener.jpg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 100%;
+}
+
+
+.our-history {
+    display: flex;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 68%, rgba(62,86,63,0) 100%);
+}
+
+.history-text h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: .5rem 0;
+}
+
+.history-text {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    width: 70%;
+}
+
+
+.our-history img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.description {
+    width: 75%;
+    margin: 10rem auto;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 10rem;
+}
+
+.description-card img {
+    width: 600px;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+}
+
+.description-card {
+    flex: 1;
+}
+
+.description-text h3 {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 1rem 0 .5rem;
+}
+
+.description-text p {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .history-text {
+        font-size: .9rem;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .description {
+        gap: 2.5rem;
+        margin: 4rem auto;
+        padding-bottom: 8rem;
+    }
+    
+    .description-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .description-text p {
+        font-size: .9rem;
+    }
+
+    .history-text {
+        font-size: .75rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .description {
+        gap: 2rem;
+    }
+
+    
+    .description-text h3 {
+        font-size: 1.25rem;
+    }
+    
+    .description-text p {
+        font-size: .8rem;
+    }
+
+    .history-text {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav.flex {
+        height: 80pxpx;
+    }
+    
+    .description {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        width: 60%;
+    }
+
+    .description-card img {
+        aspect-ratio: 1;
+    }
+
+    .description-text h3 {
+        font-size: 1.25rem;
+        margin-top: .5rem;
+    }
+    
+    .description-text p {
+        font-size: .8rem;
+    }
+
+    .history-text {
+        font-size: .4rem;
+        background: rgba(255,255,255,.8);
+        margin: auto;
+        padding: 1.25rem;
+        border-radius: .5rem;
+        width: 85%;
+        display: block;
+    }
+    
+    .history-text h3 {
+        font-size: .4rem;
+        margin-top: 0;
+    }
+    
+    body {
+        height: 100%;
+    }
+    
+    .about-us {
+        aspect-ratio: 1;
+        background-image: url(images/AboutUs-gardener.jpg);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 100%;
+    }
+    
+    .our-history {
+        background: rgba(255,255,255,.5);
+    }
+}
