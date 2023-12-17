@@ -169,6 +169,10 @@ form textarea:focus {
     div.small {
         width: 80%;
     }
+    
+    .overlay {
+        min-height: calc(100vh - 80px);
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -178,4 +182,5 @@ form textarea:focus {
 
     .overlay {
         padding: 2rem 0;
+    }
 }
